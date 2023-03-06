@@ -1,0 +1,26 @@
+{
+  "name": "template_vue3_library",
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/your-library-name.umd.cjs",
+  "module": "./dist/your-library-name.js",
+  "exports": {
+    ".": {
+      "import": "./dist/your-library-name.js",
+      "require": "./dist/your-library-name.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.4"
+  }
+}
