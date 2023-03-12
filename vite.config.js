@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/components/index.js'),
+      entry: resolve(__dirname, 'src/index.js'),
       name: 'your-library-name',
       // the proper extensions will be added
       fileName: 'your-library-name',

@@ -1,6 +1,28 @@
 # template_vue3_library
 
-This template should help get you started developing with [Vue](https://vuejs.org/) 3 in [Vite](https://vitejs.dev/).
+This template is for component libraries.
+
+Create your components inside `src/components` Then add all in the file `src/components/index.js`
+
+Check your components adding them on the `App.vue` and run the local env with `npm run dev`
+
+Change the library name on `vite.config.js`
+```js
+name: 'your-library-name',
+fileName: 'your-library-name',
+```
+
+Using the same name change the `package.json`
+```json
+"main": "./dist/your-library-name.umd.cjs",
+"module": "./dist/your-library-name.js",
+"exports": {
+  ".": {
+    "import": "./dist/your-library-name.js",
+    "require": "./dist/your-library-name.umd.cjs"
+  }
+},
+```
 
 ## Prerequisites
 
@@ -10,7 +32,7 @@ Vite requires [Node.js](https://nodejs.org/en/) version 14.18+, 16+. However, so
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-And the [Vite Configuracion for build Libraries](https://vitejs.dev/guide/build.html#library-mode).
+And see [Vite Configuracion for build Libraries](https://vitejs.dev/guide/build.html#library-mode).
 
 
 ## Project Setup
